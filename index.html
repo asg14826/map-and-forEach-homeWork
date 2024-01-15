@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map-and-foreach-methods-practice</title>
+</head>
+
+<body>
+    <script>
+        //targil 1
+        let cArr = [0, 30, 100]
+
+        function temreture(arr) {
+            return arr.map(c => (c * 9 / 5) + 32)
+        }
+
+        console.log(temreture(cArr));
+
+        //targil 2
+
+        let names = ["ben", "avigdor", "shalom", "meir"]
+
+        function addHello(arr) {
+            return arr.map(str => `hello ${str} `)
+        }
+
+        console.log(addHello(names));
+
+        //targil 3
+
+        let arr = [-1, 4, -5, 3, -12]
+
+        function changeFromCurrent(arr) {
+            return arr.map(num => num * -1)
+        }
+
+        console.log(changeFromCurrent(arr))
+
+        //targil 4
+
+        let arr1 = [10, 20, 30, 40, 50, 60, 70]
+
+        function addUp(arr) {
+            let sum = 0
+            arr.forEach(element => {
+                sum += element
+            });
+            return sum
+        }
+
+        console.log(addUp(arr1))
+
+        //targil 5
+
+        let strArr = ["java", "script", "is", "awesome"]
+
+
+        function buildStr(arr) {
+            let string = ""
+            arr.forEach(str => {
+                string += str.toString() + " "
+            })
+            return string
+        }
+
+        console.log(buildStr(strArr));
+
+        //targil 6
+        let arr2 = [2, 2, 8, 4, 54, 6, 72, 8, 98]
+        let allIsEven = true
+        arr2.forEach((element, index) => {
+            if (element % 2 !== 0) {
+                allIsEven = false
+            }
+        })
+        console.log(allIsEven ? "all are equal" : "not all are equal")
+
+    </script>
+</body>
+
+</html>
